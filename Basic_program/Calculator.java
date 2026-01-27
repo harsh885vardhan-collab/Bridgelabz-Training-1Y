@@ -1,18 +1,17 @@
-import java.util.Scanner;
-
+import java.util.*;
 class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter first number: ");
         double a = sc.nextDouble();
-
-        System.out.print("Enter second number: ");
         double b = sc.nextDouble();
+        char op = sc.next().charAt(0);
 
-        System.out.println("Addition = " + (a + b));
-        System.out.println("Subtraction = " + (a - b));
-        System.out.println("Multiplication = " + (a * b));
-        System.out.println("Division = " + (a / b));
+        switch(op) {
+            case '+': System.out.println(a + b); break;
+            case '-': System.out.println(a - b); break;
+            case '*': System.out.println(a * b); break;
+            case '/': System.out.println(a / b); break;
+            default: System.out.println("Invalid Operator");
+        }
     }
 }
